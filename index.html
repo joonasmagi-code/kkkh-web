@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>KKKH - Ametlik Koduleht</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<style>
+			:root {
+				/* --- VÄRVID --- */
+				--lehe-pohitaust:    #050505;  /* Süsimust */
+				--sektsiooni-taust:  #111111;  /* Tumehallid kastid */
+				--teksti-varv:       #e0e0e0;  /* Hele tekst */
+				--aktsent-varv:      #a80000;  /* Veripunane */
+				
+				/* --- TAUSTAPILT --- */
+				--taustapilt:        url('images/band.jpg'); 
+			}
+
+			/* --- Üldine seadistus --- */
+			body, .wrapper { background-color: var(--lehe-pohitaust) !important; color: var(--teksti-varv) !important; }
+			.wrapper.style2, .wrapper.style4 { background-color: var(--sektsiooni-taust) !important; }
+			h1, h2, h3, h4, h5, h6, strong, b { color: #ffffff !important; text-transform: uppercase; letter-spacing: 2px; }
+			
+			/* --- Lingid ja Nupud --- */
+			a { color: var(--aktsent-varv) !important; transition: 0.3s; }
+			.button { background-color: var(--aktsent-varv) !important; box-shadow: none !important; color: #fff !important; border-radius: 4px; }
+			.button:hover { background-color: #ff0000 !important; opacity: 1; }
+			.button.icon:before { margin-right: 0.6em; } /* Ikooni vahe */
+			
+			/* --- Avalehe Taustapilt --- */
+			#top {
+				background-image: var(--taustapilt) !important;
+				background-size: cover;     
+				background-position: center top; 
+				position: relative;
+				min-height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			#top:before {
+				content: '';
+				position: absolute;
+				top:0; left:0; width:100%; height:100%;
+				background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.9)); 
+				z-index: 0;
+			}
+			#top .container { position: relative; z-index: 1; text-align: center; margin-top: 15vh; }
+			#top .image.fit { display: none; }
+
+			/* --- MEIST SEKTSIOONI ERIDISAIN --- */
+			#work {
+				/* Tume üleminek (Gradient) */
+				background: linear-gradient(to bottom, #000000, #1a0202, #000000) !important;
+				border-top: 1px solid #500000;
+				border-bottom: 1px solid #500000;
+				position: relative;
+			}
+			
+			/* --- Liikmete pildid --- */
+			.member-img {
+				width: 150px; height: 150px; object-fit: cover; border-radius: 50%;
+				border: 3px solid var(--aktsent-varv); margin-bottom: 15px;
+				transition: transform 0.3s;
+			}
+			.member-img:hover { transform: scale(1.1); } 
+			
+			/* --- Videote kastid --- */
+			.video-link {
+				display: block; position: relative; border: 1px solid #333;
+				border-radius: 8px; overflow: hidden; transition: transform 0.2s;
+			}
+			.video-link:hover { transform: scale(1.02); border-color: var(--aktsent-varv); }
+			.video-link img { width: 100%; display: block; opacity: 0.8; }
+			.video-link:hover img { opacity: 1; }
+			
+			.play-icon {
+				position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+				font-size: 3em; color: #fff; background: rgba(0,0,0,0.6);
+				width: 60px; height: 60px; line-height: 60px; text-align: center;
+				border-radius: 50%; border: 2px solid #fff; pointer-events: none;
+			}
+
+			/* Kastide taust */
+			.box { background-color: #000000 !important; color: var(--teksti-varv) !important; border: 1px solid #333; }
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<nav id="nav">
+				<ul class="container">
+					<li><a href="#top">Avaleht</a></li>
+					<li><a href="#work">Meist</a></li>
+					<li><a href="#portfolio">Muusika</a></li>
+					<li><a href="#contact">Kontakt</a></li>
+				</ul>
+			</nav>
+
+		<article id="top" class="wrapper style1">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<header>
+								<h1 style="font-size: 5em; font-weight: 900; margin-bottom: 0.2em; text-shadow: 2px 2px 10px #000;">KKKH</h1>
+								<p style="font-size: 1.5em; color: #ccc;">EXPLICIT CONTENT</p>
+							</header>
+							<br>
+							<a href="#portfolio" class="button large scrolly">Kuula Muusikat</a>
+						</div>
+					</div>
+				</div>
+			</article>
+
+		<article id="work" class="wrapper style2">
+				<div class="container">
+					<header>
+						<h2>Meist</h2>
+						<p style="max-width: 800px; margin: 0 auto 3em auto; line-height: 1.8; font-size: 1.1em; color: #ccc;">
+							KKKH on nelja Eesti koolinoore loodud kaos. Me ei aja taga täiuslikkust, vaid toorest energiat otse koolipingist. 
+							Alustasime nullist, et tuua teieni filtreerimata ja ausat kraami. Lisaks muusikale teeme TikTokis podcaste.<br />
+							<strong>See on KKKH.</strong>
+						</p>
+					</header>
+
+					<div class="row">
+						<div class="col-12" style="text-align: center; margin-bottom: 30px;">
+							<h3 style="font-size: 2.5em; color: #a80000; text-shadow: 2px 2px 5px #000;">Koosseis</h3>
+						</div>
+					</div>
+					
+					<div class="row aln-center">
+						<div class="col-6 col-12-medium">
+							<section class="box style1">
+								<img src="images/karl.jpg" alt="Karl" class="member-img" onerror="this.src='https://placehold.co/150x150/111/fff?text=?'"/>
+								<h3>Karl-Kristjan Sirel</h3>
+							</section>
+						</div>
+						<div class="col-6 col-12-medium">
+							<section class="box style1">
+								<img src="images/koit.jpg" alt="Koit" class="member-img" onerror="this.src='https://placehold.co/150x150/111/fff?text=?'"/>
+								<h3>Koit Tamme</h3>
+							</section>
+						</div>
+						<div class="col-6 col-12-medium">
+							<section class="box style1">
+								<img src="images/kert.jpg" alt="Kert" class="member-img" onerror="this.src='https://placehold.co/150x150/111/fff?text=?'"/>
+								<h3>Kert Tamme</h3>
+							</section>
+						</div>
+						<div class="col-6 col-12-medium">
+							<section class="box style1">
+								<img src="images/hansen.jpg" alt="Hansen" class="member-img" onerror="this.src='https://placehold.co/150x150/111/fff?text=?'"/>
+								<h3>Hansen Uibo</h3>
+							</section>
+						</div>
+					</div>
+				</div>
+			</article>
+
+		<article id="portfolio" class="wrapper style3">
+				<div class="container">
+					<header>
+						<h2>Meie populaarsed laulud</h2>
+						<p>Kuula hitte otse YouTube'ist.</p>
+					</header>
+					<div class="row">
+						
+						<div class="col-4 col-12-medium">
+							<a href="https://www.youtube.com/watch?v=rwU47dmkLo0" target="_blank" class="video-link">
+								<img src="https://img.youtube.com/vi/rwU47dmkLo0/hqdefault.jpg" alt="Video 1" />
+								<div class="play-icon">▶</div>
+							</a>
+							<h3 style="margin-top:15px;">Kõva sügise lugu</h3> 
+						</div>
+
+						<div class="col-4 col-12-medium">
+							<a href="https://www.youtube.com/watch?v=JkTgu6DClBA" target="_blank" class="video-link">
+								<img src="https://img.youtube.com/vi/JkTgu6DClBA/hqdefault.jpg" alt="Video 2" />
+								<div class="play-icon">▶</div>
+							</a>
+							<h3 style="margin-top:15px;">Kõva jaanipäeva lugu</h3> 
+						</div>
+
+						<div class="col-4 col-12-medium">
+							<a href="https://www.youtube.com/watch?v=HDD9Up0eBDE" target="_blank" class="video-link">
+								<img src="https://img.youtube.com/vi/HDD9Up0eBDE/hqdefault.jpg" alt="Video 3" />
+								<div class="play-icon">▶</div>
+							</a>
+							<h3 style="margin-top:15px;">Kõva uue aasta lugu</h3> 
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+		<article id="contact" class="wrapper style4">
+				<div class="container medium">
+					<header>
+						<h2>Kuula ja Jälgi</h2>
+						<p>Värskeim muusika ja info otse allikast.</p>
+					</header>
+					<div class="row">
+						<div class="col-12">
+							<ul class="actions special stacked">
+								<li><a href="https://music.apple.com/us/artist/kkkh/1636343233" class="button fit icon brands fa-apple" target="_blank">Apple Music</a></li>
+								<li><a href="https://open.spotify.com/artist/6mtcEYpRhLM8jcEc7DlKue?si=z1SCUR2ETCmrkfGwuQ4Lfg" class="button fit icon brands fa-spotify" target="_blank">Spotify</a></li>
+								<li><a href="https://www.youtube.com/@4idiotsplayinggames" class="button fit icon brands fa-youtube" target="_blank">YouTube Kanal</a></li>
+								<li><a href="https://www.tiktok.com/@kkkh1058?lang=et" class="button fit icon brands fa-tiktok" target="_blank">TikTok</a></li>
+							</ul>
+						</div>
+					</div>
+					<footer>
+						<ul id="copyright">
+							<li>© KKKH. All rights reserved.</li>
+						</ul>
+					</footer>
+				</div>
+			</article>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>

@@ -67,20 +67,20 @@
 			}
 			.member-img:hover { transform: scale(1.1); } 
 			
-			/* --- Videote kastid --- */
-			.video-link {
-				display: block; position: relative; border: 1px solid #333;
-				border-radius: 8px; overflow: hidden; transition: transform 0.2s;
+			/* --- VIDEO SEADISTUS (UUS) --- */
+			.video-container {
+				position: relative;
+				padding-bottom: 56.25%; /* 16:9 suhe */
+				height: 0;
+				overflow: hidden;
+				max-width: 100%;
+				border-radius: 8px;
+				border: 1px solid #333;
+				margin-bottom: 15px;
 			}
-			.video-link:hover { transform: scale(1.02); border-color: var(--aktsent-varv); }
-			.video-link img { width: 100%; display: block; opacity: 0.8; }
-			.video-link:hover img { opacity: 1; }
-			
-			.play-icon {
-				position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-				font-size: 3em; color: #fff; background: rgba(0,0,0,0.6);
-				width: 60px; height: 60px; line-height: 60px; text-align: center;
-				border-radius: 50%; border: 2px solid #fff; pointer-events: none;
+			.video-container iframe {
+				position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+				border: 0;
 			}
 
 			/* Kastide taust */
@@ -168,27 +168,24 @@
 					<div class="row">
 						
 						<div class="col-4 col-12-medium">
-							<a href="https://www.youtube.com/watch?v=rwU47dmkLo0" target="_blank" class="video-link">
-								<img src="https://img.youtube.com/vi/rwU47dmkLo0/hqdefault.jpg" alt="Video 1" />
-								<div class="play-icon">▶</div>
-							</a>
-							<h3 style="margin-top:15px;">Kõva sügise lugu</h3> 
+							<div class="video-container">
+								<iframe src="https://www.youtube.com/embed/rwU47dmkLo0" allowfullscreen></iframe>
+							</div>
+							<h3>Kõva sügise lugu</h3> 
 						</div>
 
 						<div class="col-4 col-12-medium">
-							<a href="https://www.youtube.com/watch?v=JkTgu6DClBA" target="_blank" class="video-link">
-								<img src="https://img.youtube.com/vi/JkTgu6DClBA/hqdefault.jpg" alt="Video 2" />
-								<div class="play-icon">▶</div>
-							</a>
-							<h3 style="margin-top:15px;">Kõva jaanipäeva lugu</h3> 
+							<div class="video-container">
+								<iframe src="https://www.youtube.com/embed/JkTgu6DClBA" allowfullscreen></iframe>
+							</div>
+							<h3>Kõva jaanipäeva lugu</h3> 
 						</div>
 
 						<div class="col-4 col-12-medium">
-							<a href="https://www.youtube.com/watch?v=HDD9Up0eBDE" target="_blank" class="video-link">
-								<img src="https://img.youtube.com/vi/HDD9Up0eBDE/hqdefault.jpg" alt="Video 3" />
-								<div class="play-icon">▶</div>
-							</a>
-							<h3 style="margin-top:15px;">Kõva uue aasta lugu</h3> 
+							<div class="video-container">
+								<iframe src="https://www.youtube.com/embed/HDD9Up0eBDE" allowfullscreen></iframe>
+							</div>
+							<h3>Kõva uue aasta lugu</h3> 
 						</div>
 
 					</div>
